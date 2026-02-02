@@ -391,6 +391,15 @@ graph TD
 | 深度学习数据加载 | nibabel + PyTorch | 与深度学习框架集成好 |
 | 构建完整处理流程 | SimpleITK | 一站式解决方案 |
 
+::: tip 🤖 AI视角
+**医学影像AI项目的工具链推荐**：
+1. **数据收集**：pydicom（提取元数据，如窗宽窗位、层厚）
+2. **格式转换**：dcm2niix（批量DICOM→NIfTI）
+3. **训练阶段**：nibabel（快速读取）+ PyTorch DataLoader
+4. **预处理**：SimpleITK（重采样、配准）或直接用NumPy
+5. **可视化调试**：3D Slicer（检查数据质量、验证预测结果）
+:::
+
 ---
 
 ### 3. 可视化与交互工具

@@ -262,6 +262,14 @@ Patient（患者）
 - 明确的空间坐标系统
 - 适合脚本化批量处理
 
+::: tip 🤖 AI视角
+**为什么AI研究者更喜欢NIfTI？**
+- **训练效率**：单文件读取比遍历数百个DICOM快10-100倍
+- **数据加载**：与PyTorch/TensorFlow的DataLoader无缝集成
+- **批处理友好**：便于构建自动化训练pipeline
+- **推荐工作流**：DICOM（数据收集）→ NIfTI（训练阶段）
+:::
+
 **2004年**，由美国国立卫生研究院（NIH）资助的**神经影像信息学技术倡议**（Neuroimaging Informatics Technology Initiative）发布了**NIfTI-1**格式，迅速成为神经影像研究的事实标准。
 
 ### NIfTI文件结构
