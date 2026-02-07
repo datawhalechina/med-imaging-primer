@@ -57,6 +57,10 @@ description: 了解超声的发明历史、成像原理和技术演进
 ### 超声波的产生：压电效应
 
 超声探头（transducer）的核心是**压电晶体**（如锆钛酸铅，PZT）：
+
+![压电效应原理](/images/ch01/piezoelectric-effect.png)
+*压电效应原理示意图：施加压力使晶体正负电荷中心偏移，产生电压信号*
+
 - **正压电效应**：施加电压→晶体振动→产生超声波
 - **逆压电效应**：超声波→晶体振动→产生电压
 
@@ -141,6 +145,9 @@ $$
 | | 深度学习图像增强 | | | |
 | | 掌上超声设备 | | | |
 
+![便携式超声设备](/images/ch01/portable-ultrasound.jpg)
+*便携式超声设备（SonoSite M-Turbo），可在床旁、急诊室和野外环境中使用*
+
 ### 关键技术突破
 
 | 技术类别 | 技术名称 | 时间 | 核心贡献 | 临床价值 |
@@ -153,6 +160,9 @@ $$
 | **功能成像** | 弹性成像 | 2000s | 组织硬度测量 | 肝纤维化评估、乳腺肿块鉴别 |
 | **探头技术** | 相控阵探头 | 1980s | 电子扫描 | 心脏成像、经颅多普勒 |
 | **AI辅助** | 深度学习增强 | 2010s | 自动测量、病变检测 | 提高诊断效率和准确率 |
+
+![3D胎儿超声图像](/images/ch01/3d-ultrasound-fetus.jpg)
+*3D超声图像：20周胎儿的三维表面渲染图像，可清晰显示胎儿面部轮廓*
 
 :::: info 🎯 超声弹性成像：触摸组织的"硬度"
 传统上，医生通过触诊来评估组织的硬度（如肿块是硬还是软）。**超声弹性成像**将这种触诊"数字化"：
@@ -169,6 +179,10 @@ $$
 | **产科** | 胎儿监测 | 评估胎儿生长、检测畸形 | 实时、无辐射、可重复 |
 | | 产前诊断 | 唐氏综合征筛查、结构异常 | 3D/4D成像 |
 | **心脏** | 超声心动图 | 评估心脏结构和功能 | 实时、多普勒血流 |
+
+![超声心动图四腔心切面](/images/ch01/echocardiogram-4chambers.jpg)
+*超声心动图四腔心切面：可同时观察左右心房和左右心室的结构与运动*
+
 | | 瓣膜疾病 | 诊断瓣膜狭窄或反流 | 彩色多普勒 |
 | **腹部** | 肝胆胰脾 | 结石、肿瘤、炎症诊断 | 无辐射、便捷 |
 | | 肝纤维化 | 无创评估肝硬化程度 | 弹性成像 |
@@ -183,6 +197,15 @@ $$
 ## 🧭 学习提示
 
 - **想看 PET/SPECT（功能代谢）**：请前往 `1.1.5 PET/SPECT：功能代谢`（`/guide/ch01/01-modalities/05-pet`）。
-- **想看“US 降噪/伪像处理”等工程要点**：请结合第2章 `2.3 PET/US：衰减校正与降噪`（`/guide/ch02/03-pet-us-preprocessing`）与第5章相关后处理内容。
+- **想看"US 降噪/伪像处理"等工程要点**：请结合第2章 `2.3 PET/US：衰减校正与降噪`（`/guide/ch02/03-pet-us-preprocessing`）与第5章相关后处理内容。
+
+---
+
+## 📎 图片引用来源
+
+- 压电效应原理示意图：[Wikimedia Commons - Piezoelectricity](https://commons.wikimedia.org/wiki/File:Piezoelectricity.svg)，CC BY-SA 4.0
+- 3D胎儿超声图像：[Wikimedia Commons - 3dultrasound 20 weeks](https://commons.wikimedia.org/wiki/File:3dultrasound_20_weeks.jpg)，Public Domain
+- 超声心动图四腔心切面：[Wikimedia Commons - Echocardiogram 4chambers](https://commons.wikimedia.org/wiki/File:Echocardiogram_4chambers.jpg)，Public Domain
+- 便携式超声设备：[Wikimedia Commons - Sonosite M-Turbo](https://commons.wikimedia.org/wiki/File:Sonosite_M-Turbo_(15957728256).jpg)，CC BY 2.0
 
 

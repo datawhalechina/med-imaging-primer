@@ -19,6 +19,9 @@ description: 了解PET与SPECT的发明历史、成像原理、关键技术与�
 
 **1932年**，美国物理学家**卡尔·安德森**（Carl Anderson）在加州理工学院研究宇宙射线时，在云室中观察到一种奇特的粒子轨迹：它的质量与电子相同，但电荷相反。这就是**正电子**（positron），人类发现的第一种反物质粒子。安德森因此获得**1936年诺贝尔物理学奖**。
 
+![安德森在云室中拍摄到的正电子轨迹](/images/ch01/positron-discovery.jpg)
+*1932年安德森在云室中拍摄到的正电子轨迹照片，正电子从下方进入，穿过中间的铅板后弯曲更大（能量降低），证实了其正电荷特性*
+
 当时没有人想到，这个看似纯粹的物理学发现，会在几十年后彻底改变医学诊断。
 
 :::: tip 💡 什么是反物质？
@@ -59,6 +62,9 @@ PET成像的核心是**正电子湮灭**过程：
 4. **光子对产生**：湮灭产生两个能量为**511 keV**的γ光子，以**180度相反方向**飞出
 5. **符合探测**：PET扫描仪的探测器环同时探测到这对光子，确定湮灭发生的位置
 
+![PET成像原理示意图](/images/ch01/pet-schema-lor.png)
+*PET成像原理：正电子与电子湮灭产生两个方向相反的511 keV光子，被探测器环捕获，连线即为响应线（LOR）*
+
 #### 符合探测技术：时间就是一切
 
 PET扫描仪使用**符合探测**（coincidence detection）技术：
@@ -66,6 +72,9 @@ PET扫描仪使用**符合探测**（coincidence detection）技术：
 - 只有在极短时间窗口内（通常<10纳秒）被两个相对的探测器同时探测到的光子对，才被认为来自同一次湮灭事件
 - 这条连接两个探测器的直线称为**响应线**（Line of Response, LOR）
 - 通过数百万条LOR的重建，可以得到示踪剂在体内的三维分布图像
+
+![PET探测器系统](/images/ch01/pet-detector-system.png)
+*PET探测器系统结构：由闪烁晶体和光电倍增管组成的探测器块，排列成完整的探测器环*
 
 #### 常用的放射性示踪剂
 
@@ -90,6 +99,10 @@ PET扫描仪使用**符合探测**（coincidence detection）技术：
 单独的PET图像只显示功能信息，缺乏解剖细节。**2000年**，**大卫·汤森**（David Townsend）团队开发出第一台商用**PET-CT**扫描仪，被《时代》杂志评为"2000年度医学发明"。
 
 **PET-CT的优势：**
+
+![FDG-PET全身扫描](/images/ch01/pet-whole-body-scan.gif)
+*FDG-PET全身最大密度投影（MIP）扫描：正常脑部、肾脏和膀胱摄取FDG，肝脏可见异常高摄取灶提示转移*
+
 - CT提供精确的解剖定位
 - CT数据用于PET图像的衰减校正，提高定量准确性
 - 一次扫描同时获得功能和解剖信息
@@ -151,6 +164,10 @@ PET扫描仪使用**符合探测**（coincidence detection）技术：
 | | 疗效评估 | 早期判断治疗反应、调整方案 | ¹⁸F-FDG |
 | | 放疗计划 | 精确定位肿瘤边界 | ¹⁸F-FDG、¹¹C-甲硫氨酸 |
 | **神经系统** | 阿尔茨海默病 | 早期诊断、鉴别诊断 | ¹⁸F-FDG、淀粉样蛋白示踪剂 |
+
+![PET脑扫描：正常vs阿尔茨海默病](/images/ch01/pet-brain-alzheimers.png)
+*PET脑扫描对比：正常老年人（左）与阿尔茨海默病患者（右），患者脑部代谢活动明显减低*
+
 | | 癫痫 | 定位致痫灶 | ¹⁸F-FDG |
 | | 帕金森病 | 多巴胺系统评估 | ¹⁸F-DOPA |
 | **心血管** | 心肌活力评估 | 判断心肌是否可逆性损伤 | ¹⁸F-FDG、¹³N-氨 |
@@ -177,6 +194,9 @@ PET 的符合探测天然给出一条 LOR（响应线），而 SPECT 需要靠�
 ::::
 
 ### SPECT 系统长什么样？
+
+![SPECT伽马相机](/images/ch01/spect-gamma-camera.jpg)
+*Siemens E.Cam SPECT伽马相机，探测器头可绕患者旋转采集多角度投影*
 
 经典 SPECT 系统是**γ相机（gamma camera）** + 旋转采集：
 
@@ -211,6 +231,9 @@ SPECT 的定量通常更“难”一些：能量更低、散射更明显，且�
 
 ### SPECT 的临床价值（为什么仍然重要）
 
+![SPECT心肌灌注成像](/images/ch01/spect-heart-imaging.jpg)
+*SPECT心肌灌注成像：评估冠状动脉供血情况，是心血管疾病诊断的重要工具*
+
 虽然 PET 发展迅速，但 SPECT 仍然非常重要，原因很现实：
 
 - **可及性更高**：不依赖回旋加速器（很多 SPECT 核素来源于发生器或供应链更成熟）
@@ -237,6 +260,16 @@ SPECT 的定量通常更“难”一些：能量更低、散射更明显，且�
 1. **PET 的本质**：利用正电子湮灭产生的 511 keV 光子对，通过符合探测得到 LOR，再重建示踪剂分布。
 2. **PET 的优势**：灵敏度高、定量能力强，融合成像（PET/CT、PET/MRI）极大提升定位与临床价值。
 3. **SPECT 的本质**：单光子成像，通过准直器获得方向信息；系统响应与校正更复杂，但可及性与成本优势明显。
-4. **两者共性**：都是“看功能”的发射断层成像；区别主要来自“光子如何被探测与定位”的物理机制。
+4. **两者共性**：都是"看功能"的发射断层成像；区别主要来自"光子如何被探测与定位"的物理机制。
 
+---
 
+## 📎 图片引用来源
+
+- 正电子发现云室照片：[Wikimedia Commons - PositronDiscovery](https://commons.wikimedia.org/wiki/File:PositronDiscovery.jpg)，Public Domain
+- PET成像原理示意图：[Wikimedia Commons - PET-schema](https://commons.wikimedia.org/wiki/File:PET-schema.png)，Public Domain (Jens Maus)
+- PET探测器系统：[Wikimedia Commons - PET-detectorsystem](https://commons.wikimedia.org/wiki/File:PET-detectorsystem.png)，Public Domain (Jens Maus)
+- FDG-PET全身扫描：[Wikimedia Commons - PET-MIPS-anim](https://commons.wikimedia.org/wiki/File:PET-MIPS-anim.gif)，Public Domain (Jens Maus)
+- PET脑扫描对比：[Wikimedia Commons - PET scan normal brain vs Alzheimer's](https://commons.wikimedia.org/wiki/File:PET_scan-normal_brain-alzheimers_disease_brain.PNG)，Public Domain (NIA/NIH)
+- SPECT伽马相机：[Wikimedia Commons - Gamma camera](https://commons.wikimedia.org/wiki/File:Gamma_camera.jpg)，CC BY-SA 3.0
+- SPECT心肌灌注成像：[Wikimedia Commons - Heart spect imaging](https://commons.wikimedia.org/wiki/File:Heart_spect_imaging.jpg)，CC BY 2.5 (Patrick J. Lynch)

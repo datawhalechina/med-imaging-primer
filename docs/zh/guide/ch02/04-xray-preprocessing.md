@@ -33,9 +33,15 @@ X-ray 直接成像的图像质量直接取决于预处理的质量。不完全�
 相比传统 X-ray 胶片和影像增强管，FPD 具有更高分辨率、更低噪声、更大的动态范围和更好的实时性，是当前临床的主流方案。
 :::
 
+![X-ray平板探测器](/images/ch02/xray-flat-panel-detector.jpg)
+*X-ray平板探测器（Flat Panel Detector）：现代数字X射线成像系统的核心组件*
+
 ---
 
 ### X-ray 探测器的两种类型
+
+![传统屏-胶片探测器结构](/images/ch02/xray-screen-film-detector.png)
+*传统X-ray屏-胶片探测器结构示意图：作为对比，现代平板探测器已取代了这种传统方案*
 
 #### 间接转换型探测器（Indirect Conversion）
 
@@ -56,6 +62,9 @@ X-ray 直接成像的图像质量直接取决于预处理的质量。不完全�
 | **滞后伪影** | 中等 | 可能较明显 |
 | **温度敏感性** | 低 | 高 |
 | **临床应用** | 广泛 | 高端应用 |
+
+![平板探测器内部结构X光透视](/images/ch02/xray-fpd-internal.jpg)
+*平板探测器的X光透视图：可以看到内部的TFT像素阵列和读出电路结构*
 
 ---
 
@@ -491,3 +500,8 @@ graph LR
 - Varian, Siemens, GE 等厂商的技术文档
 - 医学物理学术期刊上的相关论文
 
+## 📎 图片引用来源
+
+- X-ray平板探测器：[Wikimedia Commons - Flat panel detector](https://commons.wikimedia.org/wiki/File:Flat_panel_detector.jpg)，CC BY-SA 3.0
+- 平板探测器内部结构：[Wikimedia Commons - XrayOfAPlatPanelDetector](https://commons.wikimedia.org/wiki/File:XrayOfAPlatPanelDetector.jpg)，CC BY-SA 4.0
+- 传统屏-胶片探测器结构：[Wikimedia Commons - Screen-film detector](https://commons.wikimedia.org/wiki/File:Screen_-_film_detector,_used_in_conventional_radiography.png)，CC BY 3.0

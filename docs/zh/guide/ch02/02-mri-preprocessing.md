@@ -22,8 +22,11 @@ description: 深入理解MRI k空间采集、噪声特性、并行成像和运�
 * 实际上，MRI 所采集的原始数据矩阵即为 k-空间数据（通常按行按列储存，对应频率编码方向 $k_x$ 和相位编码方向 $k_y$ ）。然后通过逆傅里叶变换得到最终图像。
 
 ::: tip 💡 通俗理解：k-空间与音乐频谱的类比
-如果把一张照片看作“物体”，那么 k-空间就类似“声音的频谱”——比如你听一段音乐，把它做傅里叶变换，得到不同频率的强度分布。类似地，物体的空间结构可被拆成多种“空间频率”成分。中心频率成分对应图像中的大块结构、整体灰度；高频成分对应物体的边缘、细节。我们通过梯度编码提取这些“频率”成分，储存在k-空间，再做逆变换复原图像。
+如果把一张照片看作"物体"，那么 k-空间就类似"声音的频谱"——比如你听一段音乐，把它做傅里叶变换，得到不同频率的强度分布。类似地，物体的空间结构可被拆成多种"空间频率"成分。中心频率成分对应图像中的大块结构、整体灰度；高频成分对应物体的边缘、细节。我们通过梯度编码提取这些"频率"成分，储存在k-空间，再做逆变换复原图像。
 :::
+
+![MRI k-空间数据示例](/images/ch02/mri-kspace-example.png)
+*MRI k-空间数据可视化：k-空间中心区域包含图像的低频信息（整体对比度），外围区域包含高频信息（边缘细节）*
 
 ---
 
@@ -455,6 +458,9 @@ graph LR
 
 患者体内器官、呼吸\心跳、甚至细胞微运动、头部微动、输液泵振动、血流… 均可导致成像过程中物体空间位置、或磁化状态发生变化，这种变化在k-空间中表现为：
 
+![MRI运动伪影示例](/images/ch02/mri-motion-artifact.jpg)
+*MRI运动伪影：患者在扫描过程中的运动导致图像出现模糊、重影和条纹等伪影*
+
 ①某些 k-空间行\点被采集时，物体位置\形状已变，从而使得不同k-空间行之间的相位不一致。
 
 ②梯度\采样预期与实际物体状态不同，导致 k-空间数据漂移、错位、或信号衰减。
@@ -623,6 +629,7 @@ graph LR
   
 [10] Zaitsev, M., Maclaren, J., & Herbst, M. (2015). *Motion artifacts in MRI: A complex problem with many partial solutions*. Journal of Magnetic Resonance Imaging, 42(4), 887–901.
 
+## 📎 图片引用来源
 
-
-
+- MRI k-空间数据示例：[Wikimedia Commons - Kspace](https://commons.wikimedia.org/wiki/File:Kspace.png)，CC BY-SA 4.0
+- MRI运动伪影示例：[Wikimedia Commons - MRI with motion artifacts](https://commons.wikimedia.org/wiki/File:MRI_with_motion_artifacts.jpg)，CC BY 4.0

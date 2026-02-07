@@ -33,6 +33,9 @@ description: 了解X射线的发现历史、成像原理和技术演进
 
 **1895年12月22日**，伦琴做了一个大胆的实验：他让妻子安娜·伯莎把手放在照相底片上，然后用X射线照射15分钟。当底片显影后，一幅令人震惊的图像出现了：**清晰的手骨和结婚戒指！**
 
+![第一张X射线医学影像](/images/ch01/first-xray-hand.gif)
+*1895年12月22日拍摄的第一张X射线医学影像——伦琴妻子安娜·伯莎的手，清晰可见手骨和结婚戒指*
+
 这是人类历史上第一张X射线医学影像。据说，当安娜·伯莎看到自己手骨的影像时，惊呼道："我看到了我的死亡！"（"I have seen my death!"）
 
 ::: info 📸 历史性的一刻
@@ -66,6 +69,9 @@ description: 了解X射线的发现历史、成像原理和技术演进
 
 X射线是一种**高能电磁波**，与可见光、无线电波属于同一家族，但能量要高得多：
 
+![电磁波谱](/images/ch01/em-spectrum.svg)
+*电磁波谱示意图：X射线位于紫外线和γ射线之间，波长极短、能量极高*
+
 - **波长**：0.01-10纳米（可见光的波长约为400-700纳米）
 - **频率**：30 PHz - 30 EHz（1 PHz = 10¹⁵ Hz）
 - **能量**：100 eV - 100 keV（医学X射线通常为20-150 keV）
@@ -77,6 +83,10 @@ X射线是一种**高能电磁波**，与可见光、无线电波属于同一家
 现代X射线管的基本原理与伦琴时代相似，但技术已经大大改进：
 
 **工作原理：**
+
+![X射线管（Coolidge管）原理图](/images/ch01/xray-tube-diagram.svg)
+*现代X射线管（Coolidge管）结构示意图：阴极灯丝加热释放电子，经高压加速后撞击阳极靶产生X射线*
+
 1. **阴极加热**：钨丝阴极被加热到约2000°C，释放出大量电子
 2. **高压加速**：电子在高压（通常40-150 kV）下被加速
 3. **撞击阳极**：高速电子撞击钨或钼制成的阳极靶
@@ -115,6 +125,9 @@ X射线的产生效率非常低，只有约1%的电子能量转化为X射线，�
 | **软组织/水** | 中等 | 灰色 | 器官成像 |
 | **骨骼** | 高 | 浅灰色/白色 | 骨折诊断 |
 | **金属** | 极高 | 白色（低透射） | 植入物、异物 |
+
+![正常胸部X射线（PA位）](/images/ch01/chest-xray-normal.jpg)
+*正常胸部X射线正位（PA）片：可见心影、肺野、肋骨和膈肌等正常解剖结构*
 
 ::: info 📊 衰减系数与原子序数
 组织对X射线的衰减能力主要取决于：
@@ -232,6 +245,9 @@ X射线成像就像给一本书拍照，所有的页面都叠加在一起，你�
 - 重建为伪3D图像
 - 应用：乳腺癌筛查，减少假阳性
 
+![乳腺X射线（钼靶）设备](/images/ch01/mammography-machine.jpg)
+*乳腺X射线摄影（钼靶）设备，用于乳腺癌的早期筛查*
+
 **3. 移动X射线（Mobile X-ray）**
 - 便携式DR系统
 - 可以在病床旁、手术室、急诊室使用
@@ -246,6 +262,10 @@ X射线成像就像给一本书拍照，所有的页面都叠加在一起，你�
 近年来，深度学习在X射线图像分析中取得了显著进展：
 - **肺结节检测**：敏感度可达95%以上
 - **骨折检测**：在某些部位（如腕骨）准确率超过人类医生
+
+![腕部骨折X射线](/images/ch01/xray-wrist-fracture.jpg)
+*腕部Colles骨折（桡骨远端骨折）X射线图像，这是最常见的腕部骨折类型之一*
+
 - **COVID-19筛查**：快速识别肺部感染特征
 
 但AI目前仍是辅助工具，最终诊断仍需医生确认。
@@ -299,4 +319,15 @@ X射线技术的每一次进步，都极大地改善了临床诊断和患者体�
 ::: info 💡 下一步学习
 现在你已经了解了X射线的基本原理和技术演进。在第3章中，我们将深入探讨X射线图像重建和增强的算法原理。在第2章中，我们将学习X射线图像的预处理方法，包括去噪、对比度增强等实用技术。
 :::
+
+---
+
+## 📎 图片引用来源
+
+- 第一张X射线医学影像：[Wikimedia Commons - First medical X-ray by Wilhelm Röntgen](https://commons.wikimedia.org/wiki/File:First_medical_X-ray_by_Wilhelm_R%C3%B6ntgen_of_his_wife_Anna_Bertha_Ludwig%27s_hand_-_18951222.gif)，Public Domain
+- 电磁波谱示意图：[Wikimedia Commons - EM Spectrum Properties](https://commons.wikimedia.org/wiki/File:EM_Spectrum_Properties_edit.svg)，CC BY-SA 3.0
+- X射线管原理图：[Wikimedia Commons - Roentgen-Roehre](https://commons.wikimedia.org/wiki/File:Roentgen-Roehre.svg)，Public Domain
+- 正常胸部X射线：[Wikimedia Commons - Normal PA chest radiograph](https://commons.wikimedia.org/wiki/File:Normal_posteroanterior_(PA)_chest_radiograph_(X-ray).jpg)，CC BY-SA
+- 腕部骨折X射线：[Wikimedia Commons - Collesfracture](https://commons.wikimedia.org/wiki/File:Collesfracture.jpg)，CC BY-SA 3.0
+- 乳腺X射线设备：[Wikimedia Commons - Mammography machine](https://commons.wikimedia.org/wiki/File:Mammography_machine.jpg)，Public Domain (NCI/NIH)
 

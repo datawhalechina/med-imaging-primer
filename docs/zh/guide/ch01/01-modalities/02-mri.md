@@ -69,6 +69,9 @@ MRI的成像原理与CT完全不同，它不依赖X射线，而是利用人体�
 
 ### MRI成像的四个关键步骤
 
+![MRI头部矢状面图像](/images/ch01/mri-head-side.jpg)
+*MRI头部矢状面图像，展示了MRI优秀的软组织对比度*
+
 **1. 施加强磁场（B₀）**
 - 将患者放入强大的磁场中（通常是1.5T或3T）
 - 氢原子核像指南针一样，沿着磁场方向排列
@@ -102,6 +105,9 @@ MRI最神奇的地方在于，它可以通过调整扫描参数，获得不同"�
 - 氢原子核之间相位一致性丧失的速度
 - **T2加权图像**：水呈高信号（亮），脂肪呈中等信号
 - 适合观察病变（如水肿、肿瘤）
+
+![T1、T2和质子密度加权MRI对比](/images/ch01/t1-t2-comparison.jpg)
+*同一层面的T1加权、T2加权和质子密度（PD）加权MRI图像对比，不同加权方式下组织信号强度差异明显*
 
 ::: info 📊 T1和T2的临床意义
 | 组织类型 | T1加权 | T2加权 | 临床应用 |
@@ -180,6 +186,9 @@ MRI最神奇的地方在于，它可以通过调整扫描参数，获得不同"�
 - **原理**：血氧水平依赖（BOLD）效应 - 大脑活动区域血流增加，氧合血红蛋白比例改变
 - **意义**：无创观察大脑功能活动
 
+![fMRI脑功能激活图](/images/ch01/fmri-brain-activation.jpg)
+*功能MRI（fMRI）脑激活图：彩色区域表示执行特定任务时大脑活跃的区域*
+
 **主要应用领域：**
 
 | 应用领域 | 具体应用 | 临床/科研价值 |
@@ -188,6 +197,9 @@ MRI最神奇的地方在于，它可以通过调整扫描参数，获得不同"�
 | **认知神经科学** | 记忆、注意力、情绪等认知过程研究 | 理解大脑工作机制 |
 | **精神疾病** | 抑郁症、精神分裂症、自闭症研究 | 寻找生物标志物，指导治疗 |
 | **脑机接口** | 解码大脑活动信号 | 辅助瘫痪患者交流 |
+
+![fMRI脑功能图谱](/images/ch01/fmri-brain-map.jpg)
+*fMRI脑功能图谱：通过统计分析多次任务激活数据，可以绘制出大脑不同功能区域的精细分布图*
 
 ::: info 🧠 fMRI的局限性
 虽然fMRI非常强大，但它测量的是血流变化，而不是神经元活动本身。时间分辨率较低（秒级），空间分辨率也有限（毫米级）。因此，它更适合研究"哪里"在活动，而不是"如何"活动。
@@ -239,3 +251,12 @@ MRI技术的每一次进步，都极大地扩展了临床诊断和科研的能�
 ::: info 💡 下一步学习
 现在你已经了解了MRI的基本原理和技术演进。在第3章中，我们将深入探讨MRI图像重建的数学原理，包括k空间、傅里叶变换等核心概念。在第2章中，我们将学习MRI原始数据的预处理方法，包括运动校正、偏置场校正等实用技术。
 :::
+
+---
+
+## 📎 图片引用来源
+
+- MRI头部矢状面图像：[Wikimedia Commons - MRI head side](https://commons.wikimedia.org/wiki/File:MRI_head_side.jpg)，Public Domain
+- T1/T2/PD加权MRI对比：[Wikimedia Commons - T1t2PD](https://commons.wikimedia.org/wiki/File:T1t2PD.jpg)，Public Domain
+- fMRI脑功能激活图：[Wikimedia Commons - FMRI](https://commons.wikimedia.org/wiki/File:FMRI.jpg)，CC BY-SA 3.0
+- fMRI脑功能图谱：[Wikimedia Commons](https://commons.wikimedia.org/)，CC BY-SA

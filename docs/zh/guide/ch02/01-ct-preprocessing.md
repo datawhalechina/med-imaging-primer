@@ -57,6 +57,9 @@ graph TD
     style E fill:#3a3a3a,stroke:#666,color:#e0e0e0
 ```
 
+![多排CT探测器阵列](/images/ch02/ct-multislice-detector.jpg)
+*多排CT探测器阵列示意图：现代CT扫描仪采用多排探测器，可在一次旋转中同时采集多层数据*
+
 ::: info 💡 多排探测器的优势
 多排探测器（Multi-slice detector）的出现是CT技术的重大进步。它允许在一次旋转中采集多层数据，大幅提高了扫描速度和时间分辨率。现代CT扫描仪通常配备 64-320 排探测器。
 :::
@@ -278,6 +281,9 @@ Sinogram是原始图像的**Radon变换**。通过反Radon变换（或滤波反�
 - 对于圆形物体，Sinogram呈现正弦波形（这是名称的来源）
 - Sinogram的质量直接影响重建图像的质量
 - 预处理的主要目标是生成高质量的Sinogram
+
+![CT正弦图（Sinogram）示例](/images/ch02/ct-sinogram-example.jpg)
+*CT正弦图（Sinogram）与对应的重建图像：左侧为原始投影数据排列成的正弦图，右侧为重建后的CT图像*
 
 ::: info 💡 Sinogram是连接原始数据和重建的桥梁
 理解Sinogram的概念对于理解CT重建至关重要。许多预处理步骤都是在Sinogram域进行的，目的是消除各种伪影和误差。
@@ -724,6 +730,9 @@ $$p_{\text{corrected}}(\theta) = p_{\text{measured}}(\theta) - p_{\text{scatter}
 - **电子学问题**：读出电路的故障或噪声过高
 - **老化不均匀**：某些探测器元素老化速度快于其他元素
 
+![CT环形伪影示例](/images/ch02/ct-ring-artifact.jpg)
+*CT环形伪影：由探测器元素故障或校准误差导致的同心圆环伪影，以扫描中心为圆心*
+
 **环形伪影的特征**：
 
 - **位置固定**：以扫描中心为圆心的同心圆环，在所有层面上位置相同
@@ -867,3 +876,9 @@ graph LR
 ---
 
 [1] BAUR M, UHLMANN N, PÖSCHEL T, et al., 2019. Correction of beam hardening in x-ray radiograms[J]. Review of Scientific Instruments, 90(2): 025108. DOI: 10.1063/1.5080540.
+
+## 📎 图片引用来源
+
+- 多排CT探测器阵列：[Wikimedia Commons - Matrix array multi-slice CT detector](https://commons.wikimedia.org/wiki/File:Matrix_array_multi-slice_CT_detector.jpg)，Public Domain
+- CT正弦图示例：[Wikimedia Commons - Sinogram and sample image of CT](https://commons.wikimedia.org/wiki/File:Sinogram_and_sample_image_of_computed_tomography_of_the_jaw.jpg)，CC BY 2.5
+- CT环形伪影示例：[Wikimedia Commons - CT ring artifacts](https://commons.wikimedia.org/wiki/File:CT_ring_artifacts_on_an_abdomen_scan.jpg)，CC BY 4.0

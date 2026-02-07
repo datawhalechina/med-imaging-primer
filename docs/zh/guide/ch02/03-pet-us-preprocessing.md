@@ -23,6 +23,9 @@ PET 的 γ 光子在体内传播会被组织吸收/散射，导致探测到的�
 - **PET-CT**：用 CT 生成 μ-map（线性衰减系数图），并进行能量映射/尺度变换
 - **PET-MRI**：通过分割/atlas/UTE 等方式估计 μ-map（更具挑战）
 
+![PET扫描图像示例](/images/ch02/pet-scan-example.jpg)
+*PET扫描图像：通过探测正电子湮灭产生的γ光子对，PET可以显示体内代谢活动的分布*
+
 ## 2.3.2 PET：衰减校正与重建的关系
 
 工程上通常把它看成重建管线中的一个“必要输入”：
@@ -30,7 +33,13 @@ PET 的 γ 光子在体内传播会被组织吸收/散射，导致探测到的�
 - 输入：投影/符合计数（sinogram / list-mode）、系统矩阵、μ-map（或其等价表示）
 - 输出：校正后的定量图像（SUV、动态参数等）
 
+![SPECT正弦图数据](/images/ch02/spect-sinogram.jpg)
+*SPECT正弦图（Sinogram）：核医学成像中探测器采集的原始投影数据，经过衰减校正等预处理后才能进行图像重建*
+
 同时别忘了：衰减校正只是定量的一部分，常见还包括散射校正、随机符合校正、死时间校正、归一化等。
+
+![PET全身扫描最大密度投影动画](/images/ch02/pet-mips-animation.gif)
+*PET全身扫描最大密度投影（MIP）旋转动画：展示经过衰减校正和重建后的PET图像三维效果*
 
 ---
 
@@ -42,6 +51,9 @@ PET 的 γ 光子在体内传播会被组织吸收/散射，导致探测到的�
 - **阴影/增强**：强反射或低衰减区域引起的能量分布变化
 - **混响（reverberation）**：多次反射导致的条纹
 - **折射/旁瓣**：几何与波束特性带来的伪像
+
+![超声伪像示例](/images/ch02/ultrasound-artifact-example.jpg)
+*超声成像伪像：主动脉重复伪影（duplication artifact），由多次反射等因素导致的常见超声伪像*
 
 这些会影响：边界定位、分割稳定性、以及下游定量测量（例如血流谱参数）。
 
@@ -60,6 +72,11 @@ PET 的 γ 光子在体内传播会被组织吸收/散射，导致探测到的�
 - **第1章模态回顾**：
   - PET/SPECT：`/guide/ch01/01-modalities/05-pet`
   - 超声：`/guide/ch01/01-modalities/04-ultrasound`
-- **第4章实战**：后续会在 case study 里把一个“带指标评估”的小流程跑通（PSNR/SSIM 见 `4.4`）
+- **第4章实战**：后续会在 case study 里把一个"带指标评估"的小流程跑通（PSNR/SSIM 见 `4.4`）
 
+## 📎 图片引用来源
 
+- PET扫描图像示例：[Wikimedia Commons - PET-image](https://commons.wikimedia.org/wiki/File:PET-image.jpg)，Public Domain
+- PET全身扫描MIP动画：[Wikimedia Commons - PET-MIPS-anim](https://commons.wikimedia.org/wiki/File:PET-MIPS-anim.gif)，Public Domain
+- 超声伪像示例：[Wikimedia Commons - Aorta duplication artifact](https://commons.wikimedia.org/wiki/File:Aorta_duplication_artifact_131206105958250a.jpg)，CC BY-SA 3.0
+- SPECT正弦图数据：[Wikimedia Commons - SPECT Sinogram 360](https://commons.wikimedia.org/wiki/File:SPECT_Sinogram_360.jpg)，Public Domain
