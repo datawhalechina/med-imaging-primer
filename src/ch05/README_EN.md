@@ -1,5 +1,9 @@
 # Medical Image Processing Chapter 5 Code Examples - Comprehensive Report
 
+## Directory Role Update
+
+`src/ch05/` now serves as the Chapter 5 **Code Labs / Practice Appendix** area: the mainline docs explain the four core questions, while full implementations, training scripts, runnable demos, dependency notes, and complete outputs are collected here. The documentation-side entry is `docs/en/guide/ch05/06-code-labs.md`.
+
 ## 🎯 Project Overview
 
 This project provides complete Chinese-English bilingual implementations of all Python code examples from Chapter 5 of the Medical Image Processing tutorial, including executable code, test suites, visualization capabilities, and detailed documentation. All code examples now support Chinese-English bilingual comments and visualization outputs.

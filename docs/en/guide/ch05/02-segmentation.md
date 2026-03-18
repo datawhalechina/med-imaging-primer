@@ -4,13 +4,14 @@ description: "In-depth exploration of medical image segmentation core technologi
 ---
 # 5.2 Image Segmentation: U-Net and its Variants
 
+> This mainline page answers the Chapter 5 question **"Why does segmentation work?"** Full runnable scripts, demo outputs, and environment notes are collected in [5.6 Code Labs / Practice Appendix](./06-code-labs.md) and `src/ch05/README_EN.md`.
+
 > "U-Net is not just a network architecture, but a revolutionary thinking in medical image segmentation—proving that carefully designed architectures can surpass brute-force training on large datasets." — — Ronneberger et al., "U-Net: Convolutional Networks for Biomedical Image Segmentation", MICCAI 2015
 
 In the previous section, we learned how to preprocess medical images from different modalities into formats suitable for deep learning. Now, we enter the core task of medical image AI: **image segmentation**. The goal of image segmentation is to assign a class label to each pixel in an image, such as segmenting tumor and edema regions in brain MRI, or segmenting organs and vessels in CT.
 
 In 2015, the **U-Net** architecture proposed by Ronneberger et al. completely revolutionized the medical image segmentation field. Its unique design philosophy and excellent performance made it the benchmark model for medical image segmentation, still widely used and improved today.
 
----
 
 ## ⚡ U-Net's Success in Medical Imaging
 
@@ -36,7 +37,6 @@ U-Net's success stems from three core design principles:
 ![U-Net Architecture Evolution](/images/ch05/unet-architecture.png)
 *U-Net's core idea: Encoder extracts semantic features, decoder restores spatial resolution, skip connections ensure details aren't lost - Custom diagram*
 
----
 
 ## 🔧 U-Net Architecture Deep Dive
 
@@ -251,7 +251,6 @@ class UNet(nn.Module):
         return self.final_conv(x)
 ```
 
----
 
 ## 🚀 Key U-Net Variants
 
@@ -410,7 +409,6 @@ def nnunet_auto_configuration(dataset):
 - Achieves SOTA performance on multiple datasets
 - Greatly lowers the barrier to medical image segmentation
 
----
 
 ## 📊 Specialized Loss Function Design
 
@@ -498,7 +496,6 @@ class CombinedLoss(nn.Module):
         return self.dice_weight * dice + self.focal_weight * focal
 ```
 
----
 
 ## 🏥 Multi-modality Adaptation Strategies
 
@@ -586,7 +583,6 @@ class AnatomicallyConstrainedUNet(nn.Module):
         return constrained_segmentation
 ```
 
----
 
 ## 💡 Training Tips & Best Practices
 
@@ -730,7 +726,6 @@ Augmentation Results Summary:
 - **Streak direction**: Should align with X-ray beam geometry
 - **Clinical relevance**: Limit to implant types in training patient population
 
----
 
 ### Training Monitoring
 
@@ -803,7 +798,6 @@ class CRFPostProcessor:
         return np.array(Q).reshape((unary_probs.shape[0], h, w))
 ```
 
----
 
 ## 📈 Performance Evaluation & Model Comparison
 
@@ -900,7 +894,6 @@ $$
 | **Attention U-Net** | 0.89-0.94  | ~35M            | Moderate       | Large background noise     |
 | **nnU-Net**         | 0.91-0.96  | Variable        | Auto-optimized | General scenarios          |
 
----
 
 ## 🏥 Clinical Application Case Studies
 
@@ -993,7 +986,6 @@ class LungNoduleSegmentationNet(nn.Module):
         return self.unet(fused_features)
 ```
 
----
 
 ## 🎯 Core Insights & Future Outlook
 
@@ -1023,7 +1015,6 @@ class LungNoduleSegmentationNet(nn.Module):
    - Self-supervised learning to reduce annotation dependency
    - Cross-modal domain adaptation
 
----
 
 ## 🔗 Typical Medical Datasets and Paper URLs Related to This Chapter
 
@@ -1066,7 +1057,6 @@ class LungNoduleSegmentationNet(nn.Module):
 
 :::
 
----
 
 ::: info 🚀 Next Steps
 Now you have mastered the core principles and application techniques of U-Net and its variants. In the next section (5.3 Classification and Detection), we will learn about classification and detection tasks in medical images, understanding how to further diagnose diseases and locate lesions from segmentation results.

@@ -5,13 +5,14 @@ description: Medical image augmentation and recovery techniques
 
 # 5.4 Image Augmentation and Recovery
 
+> This mainline page answers the Chapter 5 question **"When should enhancement or restoration be used?"** Commands, dependencies, full logs, and output folders are intentionally moved to [5.6 Code Labs / Practice Appendix](./06-code-labs.md) and `src/ch05/README_EN.md`.
+
 > "Data augmentation is the 'poor man's weapon' in medical imaging deep learning, while image recovery is a 'time machine' that can reconstruct lost information."  A classic metaphor in medical imaging research
 
 In the previous chapters, we learned about the core technologies of preprocessing, segmentation, classification, and detection. Now, we'll explore two critical topics: **image augmentation** and **image recovery**. While these techniques have different goals, both are dedicated to improving the quality and information content of medical images.
 
 The field of medical imaging faces unique challenges: data scarcity, variations in acquisition conditions, noise interference, and inevitable image quality degradation. Image augmentation enhances model generalization by generating more diverse training data, while image recovery aims to repair degraded image quality. Let's dive deep into these two important areas.
 
----
 
 ## 🎨 Medical Image Augmentation Techniques
 
@@ -102,7 +103,6 @@ Medical image augmentation must satisfy three critical constraint levels, distin
   - ✓ Pathological features remain diagnostically relevant
   - ✗ Reject if clinically non-realistic
 
----
 
 ### Core Principles of Medical Image Augmentation:
 
@@ -375,7 +375,6 @@ class AdversarialAugmentation:
         return perturbed_image
 ```
 
----
 
 ## 🤖 Deep Learning-driven Augmentation
 
@@ -719,7 +718,6 @@ class MedicalGAN:
             return generated_images.cpu().numpy()
 ```
 
----
 
 ## 🔄 Image Recovery & Reconstruction
 
@@ -1109,7 +1107,6 @@ class MultiScaleSR:
                             interpolation=cv2.INTER_CUBIC)
 ```
 
----
 
 ## 📏 Augmentation Effect Evaluation
 
@@ -1328,7 +1325,6 @@ class TaskOrientedEvaluation:
         return avg_metrics
 ```
 
----
 
 ## 🏥 Practical Application Cases
 
@@ -1485,7 +1481,6 @@ def super_resolution_case_study(lr_images, hr_images, model):
     }
 ```
 
----
 
 ## 🎯 Core Insights & Future Directions
 
@@ -1514,7 +1509,6 @@ def super_resolution_case_study(lr_images, hr_images, model):
 - **Cross-modal augmentation**: Use multi-modal information to improve image quality
 - **Federated learning augmentation**: Distributed data augmentation and privacy protection
 
----
 
 ## 🔗 Typical Medical Datasets and Paper URLs Related to This Chapter
 
@@ -1559,7 +1553,6 @@ def super_resolution_case_study(lr_images, hr_images, model):
 
 :::
 
----
 
 ::: info 🎯 Chapter Completion
 Through this chapter, you have mastered the core technologies of medical image augmentation and recovery. From traditional geometric transformations to advanced generative adversarial networks, from simple filtering denoising to complex deep learning super-resolution, these techniques will help you solve medical imaging data scarcity and quality issues, providing better data foundations for subsequent deep learning models.

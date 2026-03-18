@@ -5,13 +5,14 @@ description: Exploring deep learning preprocessing techniques for different medi
 
 # 5.1 Preprocessing (Modality-Specific Considerations)
 
+> This mainline page answers the Chapter 5 question **"How should data be prepared?"** Full runnable scripts, dependencies, long logs, and generated outputs are collected in [5.6 Code Labs / Practice Appendix](./06-code-labs.md) and `src/ch05/README_EN.md`.
+
 > "Good preprocessing is the foundation of successful deep learning models—garbage in, garbage out." — The Golden Rule of Medical Image AI
 
 In the previous chapters, we learned about medical imaging principles, reconstruction algorithms, and quality assessment. Now, we enter the deep learning era, facing new challenges: **how to prepare medical image data from different modalities into a format suitable for deep learning model input?**
 
 Unlike natural images, medical images have unique physical characteristics and clinical requirements. CT Hounsfield units, MRI multi-sequence characteristics, X-ray contrast limitations—each modality requires specialized preprocessing strategies. This chapter will delve into these modality-specific preprocessing techniques to lay a solid foundation for subsequent deep learning tasks.
 
----
 
 ## 🏥 Medical Image Preprocessing Importance
 
@@ -67,7 +68,6 @@ graph TD
 ```
 </details>
 
----
 
 ## 🫧 CT Preprocessing Techniques
 
@@ -385,7 +385,6 @@ patches = extract_patches(normalized, lung_mask, patch_size=64)
 - ✓ Ensure normalization to [0, 1] or zero-centered
 - ✓ Confirm no data leakage between train/test sets
 
----
 
 ## 🧲 MRI Preprocessing Techniques
 
@@ -695,7 +694,6 @@ Multi-sequence fusion:
 
 **Algorithm Analysis:** Multi-sequence fusion leverages complementary information from different MRI sequences. The execution results show that three sequences (T1, T2, FLAIR) are successfully aligned to a unified shape of (128, 128, 128) through linear interpolation and normalized using Z-score. The channel stacking strategy creates a 4D tensor with shape (128, 128, 128, 3), preserving both spatial and multi-sequence information. The quality metrics indicate good signal-to-noise ratio (22.4) and contrast-to-noise ratio (15.8), ensuring effective fusion for downstream analysis.
 
----
 
 ## 🦴 X-ray Preprocessing Techniques
 
@@ -856,7 +854,6 @@ def lung_segmentation_preprocessing(image, lung_mask):
     return normalized_image, (lung_mean, lung_std)
 ```
 
----
 
 ## 🔧 Common Preprocessing Methods
 
@@ -1006,7 +1003,6 @@ def elastic_transform_3d(image, alpha, sigma, order=1):
 *Medical image data augmentation effects*
 *Source: [Pneumonia detection data augmentation with KAGGLE RSNA challenge](https://www.kaggle.com/code/pastorsoto/pneumonia-detection-data-augmentation)*
 
----
 
 ## 📊 Preprocessing Best Practices
 
@@ -1101,7 +1097,6 @@ def validate_preprocessing(original_image, processed_image, roi_mask=None):
     return validation_results
 ```
 
----
 
 ## 🖼️ Algorithm Demonstrations
 
@@ -1199,7 +1194,6 @@ Each algorithm has complete documentation and test cases. We recommend:
 2. Use your own data for parameter optimization
 3. Establish quality check processes to ensure processing effects
 
----
 
 ## 🔑 Key Takeaways
 
@@ -1228,9 +1222,7 @@ Each algorithm has complete documentation and test cases. We recommend:
    - Expert validation processes
    - Version control and reproducibility
 
----
 
----
 
 ## 🔗 Typical Medical Datasets and Paper URLs Related to This Chapter
 
@@ -1269,7 +1261,6 @@ Each algorithm has complete documentation and test cases. We recommend:
 | **NiBabel** | DICOM/NIfTI Processing | https://nipy.org/nibabel/ | Neuroimaging data format processing |
 
 :::
----
 
 ::: info 💡 Next Steps
 Now you have mastered preprocessing techniques for different modality medical images. In the next section (5.2 Image Segmentation: U-Net and its variants), we will deeply study the core technologies of medical image segmentation, understanding how to convert preprocessed images into precise anatomical structure segmentation results.

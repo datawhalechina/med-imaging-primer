@@ -160,3 +160,8 @@ def detect_metal(image, threshold=3000):
    - `src/ch05/detect_metal_artifacts/main.py`
 
 完成这些练习后，再进入分割、分类和增强章节，你会更容易看懂“为什么同一个网络在不同数据上表现差异巨大”。
+
+
+::: tip 代码实验 / 实践附录
+运行命令、环境依赖、完整输出和可运行 demo 已统一迁移到 [5.6 代码实验 / 实践附录](./06-code-labs.md) 与 `src/ch05/README.md`。
+:::

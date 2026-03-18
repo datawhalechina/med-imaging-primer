@@ -1,9 +1,11 @@
 ---
-title: "5.5 New Paradigms: SAM & Generative AI"
+title: "5.5 Frontier Reading (Optional): SAM & Generative AI"
 description: Foundation models and generative priors in medical imaging workflows
 ---
 
-# 5.5 New Paradigms: SAM & Generative AI
+# 5.5 Frontier Reading (Optional): SAM & Generative AI
+
+> This page is **frontier reading / optional study**. Finish the four mainline Chapter 5 questions first, then return here for the forward-looking material.
 
 In recent years, medical imaging AI has been shifting from “train one model per task” toward **foundation models** and **generative priors**.
 

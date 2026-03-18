@@ -5,13 +5,14 @@ description: Classification and detection technologies in medical image analysis
 
 # 5.3 Classification and Detection
 
+> This mainline page answers the Chapter 5 question **"How should we think about classification and detection?"** For runnable demos, complete outputs, and experiment entry points, continue to [5.6 Code Labs / Practice Appendix](./06-code-labs.md) and `src/ch05/README_EN.md`.
+
 > "Medical image classification and detection are moving from computer-aided detection (CADe) to computer-aided diagnosis (CADx), and gradually becoming an important assistant for clinicians." — — Litjens et al., "A survey on deep learning in medical image analysis", Medical Image Analysis 2017
 
 In the previous sections, we learned in detail about preprocessing techniques and U-Net-based segmentation methods. Now, we enter another important area of medical image analysis: **classification and detection**. Unlike the pixel-level precision requirements of segmentation, classification and detection focus more on accurately identifying diseases and locating lesions.
 
 Medical image classification and detection face unique challenges: extreme class imbalance (the ratio of positive to negative samples can reach 1:1000), tiny lesion sizes, image quality variations, and the need for high precision and recall. In this section, we will explore how to use deep learning technology to solve these problems.
 
----
 
 ## 🔍 Classification vs Detection: Core Concepts and Differences
 
@@ -193,7 +194,6 @@ class MedicalClassificationModel(nn.Module):
         }
 ```
 
----
 
 ## 🏥 2D CNN-based X-ray Classification
 
@@ -462,7 +462,6 @@ class BalancedSampler(torch.utils.data.Sampler):
         return len(self.dataset)
 ```
 
----
 
 ## 🧠 3D CNN for Volumetric Medical Data Analysis
 
@@ -716,7 +715,6 @@ class MemoryEfficient3DNet(nn.Module):
         return x4
 ```
 
----
 
 ## 🔬 MIL for Whole Slide Image Analysis
 
@@ -1011,7 +1009,6 @@ def visualize_attention_map(wsi_path, model, attention_weights, patch_coordinate
     plt.close()
 ```
 
----
 
 ## 🎯 Object Detection in Medical Imaging
 
@@ -1294,7 +1291,6 @@ class HardNegativeMiner:
         return inter_area / (union_area + 1e-8)
 ```
 
----
 
 ## 📊 Performance Comparison and Best Practices
 
@@ -1466,7 +1462,6 @@ flowchart TD
 | **YOLOv5** | 2D X-ray | Detection | 0.75-0.82 | 1.5GB | Low |  |
 | **Attention MIL** | WSI | Classification | 0.80-0.88 | 6GB | Very High |  |
 
----
 
 ## 🎯 Technical Insights & Future Trends
 
@@ -1495,9 +1490,7 @@ flowchart TD
 - **Weakly supervised learning**: Reducing annotation requirements
 - **Federated learning**: Multi-center collaboration, privacy protection
 
----
 
----
 
 ## 🔗 Typical Medical Datasets and Paper URLs Related to This Chapter
 
@@ -1534,7 +1527,6 @@ flowchart TD
 
 :::
 
----
 
 ::: info 🚀 Next Learning
 Now you have mastered the core technologies of medical image classification and detection. In the next section (5.4 Image Augmentation and Recovery), we will explore how to overcome data scarcity challenges through advanced data enhancement techniques and recover lost image information.
