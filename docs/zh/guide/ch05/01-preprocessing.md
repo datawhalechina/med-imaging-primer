@@ -101,7 +101,7 @@ def clip_hu(image, hu_min=-1000, hu_max=1000):
 
 - **输入**：原始 CT 体数据，单位仍是 HU。
 - **输出**：截断后的 CT 数据，便于后续归一化或窗化。
-- **完整实现**：`src/ch05/clip_hu_values/main.py`。
+- 完整实现见 `src/ch05/clip_hu_values/`。
 
 ### 2. 重采样：先算缩放比例，再统一体素间距
 ```python
@@ -116,7 +116,7 @@ def scale_factors(original_spacing, target_spacing):
 
 - **输入**：如 `(0.7, 0.7, 5.0)` 的原始 spacing。
 - **输出**：对应目标 spacing 的缩放因子。
-- **完整实现**：`src/ch05/medical_image_resampling/main.py`。
+- 完整实现见 `src/ch05/medical_image_resampling/`。
 
 ### 3. MRI：用白质带做强度标准化
 ```python
@@ -132,7 +132,7 @@ def normalize_with_white_stripe(image, wm_mask):
 
 - **输入**：MRI 图像与白质区域掩膜或其近似估计。
 - **输出**：组织间更可比的标准化结果。
-- **完整实现**：`src/ch05/white_stripe_normalization/main.py`。
+- 完整实现见 `src/ch05/white_stripe_normalization/`。
 
 ### 4. 金属伪影：先做一个高阈值检测
 ```python
@@ -143,7 +143,7 @@ def detect_metal(image, threshold=3000):
 
 - **输入**：CT 图像。
 - **输出**：疑似金属区域的布尔掩膜。
-- **完整实现**：`src/ch05/detect_metal_artifacts/main.py`，其中还包含连通域筛选和可视化。
+- 完整实现见 `src/ch05/detect_metal_artifacts/`。
 
 ---
 
