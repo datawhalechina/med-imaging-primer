@@ -1,9 +1,11 @@
 ---
-title: 5.5 New Paradigms: SAM and Generative AI
-description: Understand why the final section of Chapter 5 discusses foundation models and generative AI only after the classic workflow is in place
+title: "5.5 Frontier Reading (Optional): SAM & Generative AI"
+description: Foundation models and generative priors in medical imaging workflows
 ---
 
-# 5.5 New Paradigms: SAM and Generative AI
+# 5.5 Frontier Reading (Optional): SAM & Generative AI
+
+> This page is **frontier reading / optional study**. Finish the four mainline Chapter 5 questions first, then return here for the forward-looking material.
 
 ## Opening question
 This section answers: **once we already understand preprocessing, segmentation, classification, and augmentation, why do we still need to discuss SAM and generative AI, and what exactly do they change.**
