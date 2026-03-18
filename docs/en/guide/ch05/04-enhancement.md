@@ -1,6 +1,6 @@
 ---
-title: 5.4 Image Augmentation and Restoration
-description: Understand medical image augmentation and restoration with one consistent template: not as demos, but as responses to small data and degraded images
+title: "5.4 Image Augmentation and Restoration"
+description: "Understand medical image augmentation and restoration with one consistent template: not as demos, but as responses to small data and degraded images"
 ---
 
 # 5.4 Image Augmentation and Restoration
