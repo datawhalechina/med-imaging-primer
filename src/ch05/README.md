@@ -1,6 +1,10 @@
 # 医学影像处理第五章代码示例综合报告
 # Medical Image Processing Chapter 5 Code Examples Comprehensive Report
 
+## 目录职责更新 / Directory Role Update
+
+`src/ch05/` 现在承担第五章 **代码实验 / 实践附录** 的职责：正文负责解释四条主线问题，完整实现、训练脚本、可运行 demo、环境依赖和完整输出则统一由本目录承接。文档入口见 `docs/zh/guide/ch05/06-code-labs.md`。
+
 ## 🎯 项目概述 / Project Overview
 
 本项目为医学影像处理教程第五章的所有Python代码片段创建了完整的中英文双语实现，包含可执行代码、测试套件、可视化功能和详细文档。经过最新的优化和增强，所有代码示例现在都支持中英文双语注释和可视化输出。

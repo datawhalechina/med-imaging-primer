@@ -118,7 +118,7 @@ Chapter 4 provides real medical image reconstruction cases, covering the complet
 
 **Learning Objective**: Explore the application of deep learning in medical image processing
 
-Chapter 5 introduces cutting-edge applications of deep learning in medical image post-processing, including image enhancement (denoising, super-resolution), image segmentation (U-Net and its variants), classification and detection (2D/3D CNN), etc. It emphasizes how to adapt models to the characteristics of different modalities, such as HU value normalization for CT and multi-sequence fusion for MRI.
+Chapter 5 is organized around four mainline questions in medical image post-processing: how to prepare data, why segmentation works, how to think about classification and detection, and when enhancement or restoration should be used. Runnable code, training scripts, demos, and complete outputs are collected in `src/ch05/` and the chapter practice appendix, while SAM and generative AI are positioned as optional frontier reading.
 
 ::: info 🎯 Learning Path Recommendations
 - **Beginners**: Study Chapters 1-3 in sequence to build a solid theoretical foundation

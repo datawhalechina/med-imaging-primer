@@ -133,7 +133,21 @@ def normalize_with_white_stripe(image, wm_mask):
 
 ---
 
-## 小结
-这一节学会了：**预处理的作用不是“美化图像”，而是把不同来源、不同模态的数据整理成可比较、可学习的输入。**
+## 延伸实践
+1. **把“空间统一”和“强度统一”分成两个独立函数**，便于训练与推理共用。
+2. **同时保存处理前后的 spacing 与强度范围**，方便回溯实验差异。
+3. **尝试比较不同 CT 窗口**：肺窗、软组织窗、骨窗是否能作为多通道输入。
+4. **比较 MRI 标准化策略**：White Stripe、z-score、百分位归一化对下游分割的影响。
+5. **阅读并运行本地源码**：
+   - `src/ch05/clip_hu_values/main.py`
+   - `src/ch05/medical_image_resampling/main.py`
+   - `src/ch05/n4itk_bias_correction/main.py`
+   - `src/ch05/white_stripe_normalization/main.py`
+   - `src/ch05/detect_metal_artifacts/main.py`
 
-下一节接着讲分割，是因为当输入已经被整理到可控范围后，我们就可以进一步回答：**模型怎样给出“病灶或器官到底在哪儿”的像素级答案。**
+完成这些练习后，再进入分割、分类和增强章节，你会更容易看懂“为什么同一个网络在不同数据上表现差异巨大”。
+
+
+::: tip 代码实验 / 实践附录
+运行命令、环境依赖、完整输出和可运行 demo 已统一迁移到 [5.6 代码实验 / 实践附录](./06-code-labs.md) 与 `src/ch05/README.md`。
+:::
