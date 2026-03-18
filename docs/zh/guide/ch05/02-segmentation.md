@@ -100,7 +100,7 @@ def double_conv(in_channels, out_channels):
 
 - **输入**：某一层特征图。
 - **输出**：通道数增加、局部表征更强的特征图。
-- **完整实现**：`src/ch05/lung_segmentation_network/main.py`。
+- 完整实现见 `src/ch05/lung_segmentation_network/`。
 
 ### 2. 跳跃连接的关键动作：拼接
 ```python
@@ -128,7 +128,7 @@ def dice_score(pred_mask, true_mask, eps=1e-6):
 
 - **输入**：预测掩膜与真值掩膜。
 - **输出**：`0~1` 的重叠度量。
-- **完整评估与报告**：`src/ch05/lung_segmentation_network/main.py` 及其 `output/` 结果文件。
+- 完整训练、评估与结果导出见 `src/ch05/lung_segmentation_network/`。
 
 ---
 

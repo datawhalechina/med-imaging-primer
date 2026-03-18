@@ -91,7 +91,7 @@ def small_rotation(image, angle=5):
 
 - **输入**：单张医学图像。
 - **输出**：小角度旋转后的图像。
-- **完整实现**：`src/ch05/medical_image_augmentation/simple_augmentation.py`。
+- 完整实现见 `src/ch05/medical_image_augmentation/`。
 
 ### 2. 一个最小的强度扰动片段
 ```python
@@ -119,7 +119,7 @@ def run_clahe(image, clip_limit=2.0, tile_grid_size=(8, 8)):
 
 - **输入**：8-bit 灰度图像。
 - **输出**：局部对比度增强后的图像。
-- **完整实现**：`src/ch05/clahe_enhancement/main.py`。
+- 完整实现见 `src/ch05/clahe_enhancement/`。
 
 ---
 
