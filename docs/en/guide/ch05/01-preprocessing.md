@@ -44,28 +44,6 @@ Medical image preprocessing can be divided into three levels:
 ![Medical Image Preprocessing Hierarchy](/images/ch05/01-preprocessing-hierarchy-en.png)
 *Figure: Three levels of medical image preprocessing from basic to modality-specific to task-oriented.*
 
-<details>
-<summary>📖 View Original Mermaid Code</summary>
-
-```mermaid
-graph TD
-    A[Raw Medical Images] --> B[Basic Preprocessing]
-    B --> C[Modality-Specific Preprocessing]
-    C --> D[Task-Oriented Preprocessing]
-
-    B --> B1[Resampling]
-    B --> B2[Orientation Standardization]
-    B --> B3[Size Adjustment]
-
-    C --> C1[CT: Windowing]
-    C --> C2[MRI: Bias Correction]
-    C --> C3[X-ray: Contrast Enhancement]
-
-    D --> D1[Data Augmentation]
-    D --> D2[Normalization]
-    D --> D3[Batch Balancing]
-```
-</details>
 
 ---
 
@@ -136,7 +114,7 @@ def clip_hu_values(image, min_hu=-1000, max_hu=1000):
     return processed_image
 ```
 
-[📖 **Complete Code Example**: `clip_hu_values/`](https://github.com/datawhalechina/med-imaging-primer/tree/main/src/ch05/clip_hu_values/) - Complete HU value clipping implementation, test cases and visualization demonstrations
+Full implementation: `src/ch05/clip_hu_values/`.
 
 **Common Clipping Ranges:**
 - **Soft tissue range**: [-200, 400] HU (exclude air and dense bone)
@@ -167,7 +145,7 @@ def detect_metal_artifacts(image, threshold=3000):
     return significant_metal
 ```
 
-[📖 **Complete Code Example**: `detect_metal_artifacts/`](https://github.com/datawhalechina/med-imaging-primer/tree/main/src/ch05/detect_metal_artifacts/) - Complete metal artifact detection algorithm, connectivity analysis and visualization functionality
+Full implementation: `src/ch05/detect_metal_artifacts/`.
 
 ### Practical Case: [Preparing CT imaging datasets for deep learning in lung nodule analysis: Insights from four well-known datasets](https://pmc.ncbi.nlm.nih.gov/articles/PMC10361226/pdf/main.pdf)
 
@@ -210,7 +188,7 @@ This range encompasses:
 - Ground-glass nodules: HU < -300 (reduced attenuation)
 - Malignant lesions: Mean HU 30-50, maximum < 150
 
-**[📖 Complete Code Example**: `clip_hu_values/`](https://github.com/datawhalechina/med-imaging-primer/tree/main/src/ch05/clip_hu_values/) - HU value clipping with clinical validation]
+Full implementation for the clipping stage: `src/ch05/clip_hu_values/`.
 
 ##### **3. Lung Window and Contrast Enhancement**
 
@@ -297,7 +275,7 @@ Within the segmented lung region, nodule candidates are identified and extracted
 - Connected-component analysis (size filtering)
 - Juxta-pleural nodule handling (specialized CNN for edge-attached nodules)
 
-**[📖 Complete Code Example**: `medical_segmentation_augmentation/`](https://github.com/datawhalechina/med-imaging-primer/tree/main/src/ch05/medical_segmentation_augmentation/) - Advanced segmentation with medical constraints]
+Full implementation for the segmentation-aware preprocessing stage: `src/ch05/medical_segmentation_augmentation/`.
 
 ##### **7. Normalization for Deep Learning**
 
@@ -512,7 +490,7 @@ Bias Field Correction Statistics:
 
 **Algorithm Analysis:** MRI bias field visualization estimates and displays bias field through multiple methods. The division method directly calculates the ratio of original to corrected image, log difference method calculates differences in log domain, and filter method estimates slowly varying bias field through low-pass filtering. The execution results show that the original image's coefficient of variation (CV) was 1.277, reduced to 0.972 after correction, a reduction of 23.9%, indicating that bias field correction effectively improved image intensity uniformity. The bias field mean is close to 1.0, conforming to theoretical expectations. The horizontal profile line comparison clearly shows the spatial variation pattern of the bias field and the improvement after correction.
 
-[📖 **Complete Code Example**: `visualize_bias_field/`](https://github.com/datawhalechina/med-imaging-primer/tree/main/src/ch05/visualize_bias_field/) - Complete MRI bias field estimation, multiple visualization methods and quantitative analysis functionality
+Full implementation: `src/ch05/visualize_bias_field/`.
 
 ### N4ITK Bias Field Correction Algorithm
 
@@ -601,7 +579,7 @@ Correction Statistics:
 
 **Algorithm Analysis:** N4ITK is a multi-scale iterative bias field correction method based on B-spline modeling. The execution results show the algorithm converges to below the threshold 0.001 after 20 iterations. The original image's coefficient of variation (CV) was 1.871, reduced to 1.493 after correction, an improvement of 20.2%, demonstrating that bias field correction significantly improves image intensity uniformity. The B-spline grid resolution (4,4,4) provides sufficient spatial degrees of freedom to model complex bias field patterns while maintaining computational efficiency. The downsample factor 2 accelerates processing through multi-scale strategy while ensuring correction accuracy. The bias field mean of 1.028 and std of 0.267 indicate a relatively smooth and stable bias field pattern.
 
-[📖 **Complete Code Example**: `n4itk_bias_correction/`](https://github.com/datawhalechina/med-imaging-primer/tree/main/src/ch05/n4itk_bias_correction/) - Complete N4ITK bias field correction implementation, test cases, synthetic data generation and visualization functionality
+Full implementation: `src/ch05/n4itk_bias_correction/`.
 
 ### White Stripe Intensity Normalization
 
@@ -613,7 +591,7 @@ Correction Statistics:
 2. **Extract white matter intensity range**: Find the dominant mode of white matter through statistical analysis
 3. **Linear mapping**: Map white matter range to standard interval (e.g., [0, 1])
 
-[📖 **Complete Code Example**: `white_stripe_normalization/`](https://github.com/datawhalechina/med-imaging-primer/tree/main/src/ch05/) - Full White Stripe normalization implementation with multi-modality support]
+Full implementation: `src/ch05/white_stripe_normalization/`.
 
 **Execution Results Analysis:**
 
@@ -653,7 +631,7 @@ Normalization completed successfully!
 
 **Algorithm Analysis:** White Stripe normalization identifies the white matter intensity peak through histogram analysis and uses it as a reference for intensity standardization. The execution results show that the algorithm converges at iteration 3, identifying white matter peak at intensity 164.2. White matter comprises 8.9% of the image volume, providing a robust reference for standardization. By mapping the white matter range [147.8, 180.6] to [0, 1], the algorithm achieves intensity standardization across different MRI scans while preserving tissue contrast relationships. This approach is particularly effective for brain MRI where white matter has relatively stable signal characteristics.
 
-[📖 **Complete Code Example**: `white_stripe_normalization/`](https://github.com/datawhalechina/med-imaging-primer/tree/main/src/ch05/white_stripe_normalization/) - Complete White Stripe normalization implementation with multi-modality support and intensity mapping verification
+Full implementation: `src/ch05/white_stripe_normalization/`.
 
 ### Multi-sequence MRI Fusion Strategies
 
@@ -670,15 +648,14 @@ Different MRI sequences provide complementary tissue information:
 
 ![MRI Multi-sequence ](/images/ch05/MRI-BraTS2020.png)
 *Exemplary images depicting a WHO Grade IV Glioblastoma Multiforme (GBM) from the Multimodal Brain Tumor Segmentation Challenge (BraTS) 2020 dataset: Each row shows the axial, coronal and a sagittal view of each of the T1, T1CE, T2 and FLAIR sequences as well as the expert segmentation of the tumor (SEG): Necrotic core and non-enhancing tumor (center, dark grey), enhancing tumor (white, surrounding the necrotic core), peritumoral edema (light grey).*
-*Source: [Optimal acquisition sequence for AI-assisted brain tumor segmentation under the constraint of largest information gain per additional MRI sequence](https://www.sciencedirect.com/science/article/pii/S2772528622000152)*
-
 ![MRI2](/images/ch05/MRI2.png)
-*Sample images of the BrTMHD-2023 Dataset*
-*Source: [Brain tumor detection and classification in MRI using hybrid ViT and GRU model with explainable AI in Southern Bangladesh](https://www.nature.com/articles/s41598-024-71893-3)*
+*Sample images of the BrTMHD-2023 Dataset.*
+
+*Sources for the MRI sequence figures: the information-gain study for the BraTS example, and the BrTMHD classification paper for the sample MRI panel.*
 
 #### Multi-sequence Fusion Methods
 
-[📖 **Complete Code Example**: `multisequence_fusion/`](https://github.com/datawhalechina/med-imaging-primer/tree/main/src/ch05/) - Multi-sequence MRI fusion implementation with different strategies]
+Full implementation: `src/ch05/multisequence_fusion/`.
 
 **Execution Results Analysis:**
 
@@ -1017,35 +994,6 @@ def elastic_transform_3d(image, alpha, sigma, order=1):
 ![Task-driven Preprocessing Strategy](/images/ch05/02-preprocessing-strategy-en.png)
 *Figure: Decision flow for selecting appropriate preprocessing strategies based on imaging modality.*
 
-<details>
-<summary>📖 View Original Mermaid Code</summary>
-
-```mermaid
-flowchart TD
-    A[Medical Image Preprocessing Task] --> B{Determine Imaging Modality}
-
-    B -->|CT| C[HU Value Calibration]
-    C --> D[Window Level Adjustment]
-    D --> E[Outlier Processing]
-
-    B -->|MRI| F[Bias Field Correction]
-    F --> G[Intensity Standardization]
-    G --> H[Multi-sequence Fusion]
-
-    B -->|X-ray| I[Contrast Enhancement]
-    I --> J[Anatomical Region Segmentation]
-    J --> K[Local Normalization]
-
-    E --> L[Universal Preprocessing]
-    H --> L
-    K --> L
-
-    L --> M[Resampling]
-    M --> N[Size Standardization]
-    N --> O[Data Augmentation]
-    O --> P[Final Normalization]
-```
-</details>
 
 ### Common Pitfalls and Solutions
 
@@ -1105,7 +1053,7 @@ def validate_preprocessing(original_image, processed_image, roi_mask=None):
 
 ## 🖼️ Algorithm Demonstrations
 
-Below we showcase the practical effects of our implemented preprocessing algorithms on real data. All code examples can be found and run in the [`ch05-code-examples`](https://github.com/datawhalechina/med-imaging-primer/tree/main/src/ch05/) directory.
+Below we showcase the practical effects of our implemented preprocessing algorithms on real data. Full runnable examples are grouped under `src/ch05/`.
 
 ### MRI Bias Field Visualization and Correction
 

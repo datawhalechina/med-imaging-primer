@@ -21,7 +21,7 @@ The field of medical imaging faces unique challenges: data scarcity, variations 
 
 Geometric transformations for medical images require special consideration, as anatomical spatial relationships cannot be arbitrarily altered:
 
-[📖 **Complete Code Example**: `data_augmentation/`](https://github.com/datawhalechina/med-imaging-primer/tree/main/src/ch05/) - Complete medical image augmentation implementation, 2D/3D transformations, and modality adaptation]
+Full implementation: `src/ch05/medical_image_augmentation/`.
 
 **Execution Results Analysis:**
 

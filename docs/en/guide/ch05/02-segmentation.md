@@ -47,61 +47,6 @@ Let's deeply understand U-Net's network structure and data flow:
 ![U-Net Architecture Deep Dive](/images/ch05/03-unet-architecture-en.png)
 *Figure: U-Net's encoder-decoder structure showing how skip connections transfer shallow features to deep layers to preserve spatial details.*
 
-<details>
-<summary>📖 View Original Mermaid Code</summary>
-
-```mermaid
-graph TD
-    subgraph "Encoder Path (Contracting Path)"
-        A[Input: 512×512×1] --> B[Conv3×3+ReLU ×2]
-        B --> C[64 channels]
-        C --> D[MaxPool2×2]
-        D --> E[Conv3×3+ReLU ×2]
-        E --> F[128 channels]
-        F --> G[MaxPool2×2]
-        G --> H[Conv3×3+ReLU ×2]
-        H --> I[256 channels]
-        I --> J[MaxPool2×2]
-        J --> K[Conv3×3+ReLU ×2]
-        K --> L[512 channels]
-        L --> M[MaxPool2×2]
-        M --> N[Conv3×3+ReLU ×2]
-        N --> O[1024 channels]
-    end
-
-    subgraph "Decoder Path (Expanding Path)"
-        O --> P[Up-Conv2×2]
-        L --> P
-        P --> Q[Concat: 1024+512=1536]
-        Q --> R[Conv3×3+ReLU ×2]
-        R --> S[512 channels]
-        S --> T[Up-Conv2×2]
-        I --> T
-        T --> U[Concat: 512+256=768]
-        U --> V[Conv3×3+ReLU ×2]
-        V --> W[256 channels]
-        W --> X[Up-Conv2×2]
-        F --> X
-        X --> Y[Concat: 256+128=384]
-        Y --> Z[Conv3×3+ReLU ×2]
-        Z --> AA[128 channels]
-        AA --> AB[Up-Conv2×2]
-        C --> AB
-        AB --> AC[Concat: 128+64=192]
-        AC --> AD[Conv3×3+ReLU ×2]
-        AD --> AE[64 channels]
-        AE --> AF[Conv1×1]
-        AF --> AG[Output: Segmentation Map]
-    end
-
-    style A fill:#E8F8F5
-    style AG fill:#FADBD8
-
-    classDef skip fill:#F9F,stroke:#333,stroke-width:2px;
-    linkStyle 7,11,15,19 stroke-width:2px,fill:none,stroke:blue,stroke-dasharray: 5 5;
-```
-
-</details>
 
 ### Detailed Analysis of Key Components
 
@@ -300,35 +245,8 @@ The original U-Net's skip connections might not be fine enough; U-Net++ improves
 
 **Dense Skip Connections**: Establish connections between decoder layers at different depths
 
-```mermaid
-graph TD
-    A[Input] --> B[Encoder L1]
-    B --> C[Encoder L2]
-    C --> D[Encoder L3]
-    D --> E[Encoder L4]
-
-    E --> F[Decoder L4]
-    D --> F
-    C --> F
-    B --> F
-
-    F --> G[Decoder L3]
-    D --> G
-    C --> G
-    B --> G
-
-    G --> H[Decoder L2]
-    C --> H
-    B --> H
-
-    H --> I[Decoder L1]
-    B --> I
-
-    I --> J[Output]
-
-    classDef dense stroke:#f66,stroke-width:2px;
-    linkStyle 5,6,7,8,9,10,11,12,13,14 stroke:#f66,stroke-width:2px;
-```
+![U-Net++ Dense Skip Connections](/images/ch05/04-unet-plus-plus-en.png)
+*Figure: U-Net++ replaces one-step skip fusion with denser intermediate pathways, making encoder and decoder features easier to align.*
 
 **U-Net++ advantages:**
 
@@ -640,7 +558,7 @@ def medical_segmentation_augmentation(image, mask):
     return image, mask
 ```
 
-[📖 **Complete Code Example**: `medical_segmentation_augmentation/`](https://github.com/datawhalechina/med-imaging-primer/tree/main/src/ch05/medical_segmentation_augmentation/) - Complete medical image segmentation augmentation implementation with multiple augmentation strategies and clinical validation
+Full implementation: `src/ch05/medical_segmentation_augmentation/`.
 
 ### Medical Image Segmentation Augmentation Demonstration
 
