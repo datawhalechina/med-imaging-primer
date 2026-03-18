@@ -1,6 +1,6 @@
 ---
-title: 5.2 Segmentation: U-Net and its variants
-description: Understand medical image segmentation with one consistent template: why pixel-level answers matter and why U-Net works
+title: "5.2 Segmentation: U-Net and its variants"
+description: "Understand medical image segmentation with one consistent template: why pixel-level answers matter and why U-Net works"
 ---
 # 5.2 Segmentation: U-Net and its variants
 

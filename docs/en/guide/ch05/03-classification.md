@@ -1,6 +1,6 @@
 ---
-title: 5.3 Classification and Detection
-description: Understand medical image classification and detection with one consistent template: when full contours are unnecessary and how models first decide, then localize
+title: "5.3 Classification and Detection"
+description: "Understand medical image classification and detection with one consistent template: when full contours are unnecessary and how models first decide, then localize"
 ---
 # 5.3 Classification and Detection
 
