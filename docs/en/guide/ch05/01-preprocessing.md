@@ -1,6 +1,6 @@
 ---
-title: 5.1 Preprocessing (with modality differences in mind)
-description: Understand medical image preprocessing with one consistent template: why it exists, what intuition matters, and how it supports downstream tasks
+title: "5.1 Preprocessing (with modality differences in mind)"
+description: "Understand medical image preprocessing with one consistent template: why it exists, what intuition matters, and how it supports downstream tasks"
 ---
 # 5.1 Preprocessing (with modality differences in mind)
 
